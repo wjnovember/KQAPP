@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="radius_btn_corner">6dp</dimen>
+    <dimen name="text_size_default">16sp</dimen>
+    <dimen name="text_size_hint">14sp</dimen>
+    <dimen name="widget_height">48dp</dimen>
+    <dimen name="et_ip_width">60dp</dimen>
+    <dimen name="et_ip_height">40dp</dimen>
+    <dimen name="et_port_height">40dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_size_nav_header">24sp</dimen>
+
+    <dimen name="drawer_padding_top">0dp</dimen>
+    <dimen name="app_bar_padding">0dp</dimen>
+</resources>

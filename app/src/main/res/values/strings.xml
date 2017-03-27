@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Kaoqin</string>
+    <string name="confirm">确定</string>
+    <string name="ip_settings">IP设置</string>
+    <string name="hint_pwd">请输入密码</string>
+    <string name="hint_account">请输入教工号/手机号</string>
+    <string name="login">登录</string>
+    <string name="ip_address">IP地址</string>
+    <string name="port">端口号</string>
+
+    <string name="invalid_ip">IP地址需在0~255之间</string>
+    <string name="invalid_port">端口号范围需在1~65535之间</string>
+    <string name="title_activity_home">考勤</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
