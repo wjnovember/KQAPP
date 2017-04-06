@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hznu.kaoqin.LoginActivity">
+    tools:context="com.hznu.kaoqin.activity.LoginActivity">
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -22,7 +22,8 @@
         android:layout_marginBottom="32dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:src="@mipmap/ic_launcher_round"
+        app:riv_oval="true"
+        android:src="@mipmap/ic_launcher"
         app:layout_constraintBottom_toTopOf="@+id/et_account"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
@@ -36,6 +37,7 @@
         android:layout_marginRight="0dp"
         android:background="@color/white"
         android:hint="@string/hint_account"
+        android:inputType="numberDecimal"
         android:maxLines="1"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
@@ -50,7 +52,7 @@
         android:layout_marginBottom="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="0dp"
-        android:background="#666666"
+        android:background="@color/colorDivider"
         app:layout_constraintBottom_toTopOf="@+id/et_pwd"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
@@ -76,7 +78,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="32dp"
-        android:background="@drawable/bg_btn_round_color_primary"
+        android:background="@drawable/bg_btn_corner_round_color_primary"
         android:text="@string/login"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_default"

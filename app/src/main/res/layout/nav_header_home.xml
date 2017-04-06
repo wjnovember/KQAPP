@@ -6,8 +6,8 @@
     android:layout_height="@dimen/nav_header_height"
     android:background="@drawable/side_nav_bar"
     android:gravity="bottom"
+    android:paddingTop="@dimen/nav_header_padding"
     android:orientation="vertical"
-    android:paddingTop="@dimen/drawer_padding_top"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <com.makeramen.roundedimageview.RoundedImageView
@@ -17,13 +17,13 @@
         android:layout_marginBottom="0dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="0dp"
-        android:src="@mipmap/ic_launcher_round"
+        android:src="@drawable/ic_avatar_default"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_name"
+        android:id="@+id/tv_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="0dp"

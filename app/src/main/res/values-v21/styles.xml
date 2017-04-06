@@ -7,6 +7,5 @@
         <item name="android:colorAccent">@color/colorAccent</item>
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
         <item name="android:windowBackground">@color/background_default</item>
-        <item name="android:windowTranslucentStatus">true</item>
     </style>
 </resources>

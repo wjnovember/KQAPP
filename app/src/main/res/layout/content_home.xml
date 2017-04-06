@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.hznu.kaoqin.activity.HomeActivity"
     tools:showIn="@layout/app_bar_home">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_course"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_default">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_no_course"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_course"/>
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab_kaoqin"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_see"
+        app:fab_colorNormal="@color/colorPrimary"
+        app:fab_colorDisabled="@color/colorPrimaryLight"
+        app:fab_colorPressed="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_dimen"/>
+</RelativeLayout>

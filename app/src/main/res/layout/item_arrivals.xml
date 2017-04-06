@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_st_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="学生姓名"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="@dimen/text_size_item_student"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_gender"
+        android:layout_width="@dimen/icon_gender_dimen"
+        android:layout_height="@dimen/icon_gender_dimen"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_st_name"
+        app:layout_constraintLeft_toRightOf="@+id/tv_st_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_st_name"
+        app:srcCompat="@drawable/ic_male" />
+
+    <TextView
+        android:id="@+id/tv_st_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorTextGray"
+        android:textSize="@dimen/text_size_default"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="8dp"
+        android:text="2013452564"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_st_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_st_name" />
+
+    <TextView
+        android:id="@+id/tv_st_profession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_default"
+        android:textColor="@color/colorTextGray"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="8dp"
+        android:text="软件工程"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_st_id"
+        app:layout_constraintTop_toBottomOf="@+id/tv_st_id" />
+
+    <TextView
+        android:id="@+id/tv_st_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_default"
+        android:textColor="@color/colorTextGray"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="0dp"
+        android:text="131班"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_st_profession"
+        app:layout_constraintLeft_toRightOf="@+id/tv_st_profession"
+        app:layout_constraintTop_toTopOf="@+id/tv_st_profession"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_arrival_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="@dimen/text_size_default"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="0dp"
+        android:text="13:00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

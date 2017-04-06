@@ -2,6 +2,8 @@
 <resources>
     <dimen name="radius_btn_corner">6dp</dimen>
     <dimen name="text_size_default">16sp</dimen>
+    <dimen name="text_size_item_course_name">20sp</dimen>
+    <dimen name="text_size_item_classroom">16sp</dimen>
     <dimen name="text_size_hint">14sp</dimen>
     <dimen name="widget_height">48dp</dimen>
     <dimen name="et_ip_width">60dp</dimen>
@@ -15,6 +17,12 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_size_nav_header">24sp</dimen>
 
-    <dimen name="drawer_padding_top">0dp</dimen>
-    <dimen name="app_bar_padding">0dp</dimen>
+    <dimen name="refresh_btn_height">40dp</dimen>
+    <dimen name="nav_header_padding">24dp</dimen>
+    <dimen name="course_round_dimen">60dp</dimen>
+    <dimen name="text_size_course_round">24sp</dimen>
+    <dimen name="icon_gender_dimen">16dp</dimen>
+    <dimen name="spinner_height">48dp</dimen>
+    <dimen name="fab_dimen">32dp</dimen>
+    <dimen name="text_size_item_student">16sp</dimen>
 </resources>

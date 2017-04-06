@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hznu.kaoqin.activity.CourseDetailActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/app_bar"
+        app:title="@string/course_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/AppTheme.AppBar"
+        android:background="@color/colorPrimary"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tv_course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text=""
+            app:layout_constraintLeft_toRightOf="@+id/tv_course_round"
+            app:layout_constraintTop_toTopOf="@+id/tv_course_round"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <TextView
+            android:id="@+id/tv_course_round"
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/bg_course_round_color_primary"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_course_round"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+        <TextView
+            android:id="@+id/tv_classroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            app:layout_constraintLeft_toLeftOf="@+id/tv_course_name"
+            app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+        <TextView
+            android:id="@+id/tv_weeks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text=""
+            app:layout_constraintLeft_toLeftOf="@+id/tv_course_round"
+            app:layout_constraintTop_toBottomOf="@+id/tv_course_round" />
+
+        <TextView
+            android:id="@+id/tv_day_in_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="@+id/tv_weeks"
+            app:layout_constraintLeft_toRightOf="@+id/tv_weeks"
+            app:layout_constraintTop_toTopOf="@+id/tv_weeks" />
+
+        <TextView
+            android:id="@+id/tv_classes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="@+id/tv_day_in_week"
+            app:layout_constraintLeft_toRightOf="@+id/tv_day_in_week"
+            app:layout_constraintTop_toTopOf="@+id/tv_day_in_week" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.43"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="51dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/rv_students"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_no_student"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/course_no_student"
+            android:textSize="@dimen/text_size_default"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

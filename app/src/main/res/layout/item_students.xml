@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingBottom="8dp"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/tv_student_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_loading"
+        android:textColor="@color/colorTextPrimary"
+        android:layout_marginLeft="16dp"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <ImageView
+        android:id="@+id/img_gender"
+        android:layout_width="@dimen/icon_gender_dimen"
+        android:layout_height="@dimen/icon_gender_dimen"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_student_name"
+        app:layout_constraintLeft_toRightOf="@+id/tv_student_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_student_name"
+        app:srcCompat="@drawable/ic_male" />
+
+    <TextView
+        android:id="@+id/tv_profession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/profession_loading"
+        android:textColor="@color/colorTextGray"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_student_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_student_name" />
+
+    <TextView
+        android:id="@+id/tv_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="0dp"
+        android:text="131"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_profession"
+        app:layout_constraintLeft_toRightOf="@+id/tv_profession"
+        app:layout_constraintTop_toTopOf="@+id/tv_profession" />
+</android.support.constraint.ConstraintLayout>

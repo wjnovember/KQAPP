@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/et_course_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="课程名称"
+        android:textColor="@color/colorTextPrimary"
+        android:textSize="@dimen/text_size_item_course_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/et_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="8dp"
+        android:text="1~16周"
+        android:textColor="@color/colorTextGray"
+        android:textSize="@dimen/text_size_default"
+        app:layout_constraintLeft_toLeftOf="@+id/et_course_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_course_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/et_day_in_a_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorTextGray"
+        android:textSize="@dimen/text_size_default"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="0dp"
+        android:text="星期一"
+        app:layout_constraintBottom_toBottomOf="@+id/et_week"
+        app:layout_constraintLeft_toRightOf="@+id/et_week"
+        app:layout_constraintTop_toTopOf="@+id/et_week" />
+
+    <TextView
+        android:id="@+id/et_class"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorTextGray"
+        android:textSize="@dimen/text_size_default"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="3~5节"
+        app:layout_constraintLeft_toRightOf="@+id/et_day_in_a_week"
+        app:layout_constraintTop_toTopOf="@+id/et_day_in_a_week"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_day_in_a_week"
+        android:layout_marginBottom="0dp" />
+
+    <TextView
+        android:id="@+id/et_classroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_item_classroom"
+        android:textColor="@color/colorTextPrimary"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="0dp"
+        android:text="33-309"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_course_name"
+        app:layout_constraintBottom_toBottomOf="@+id/et_week"
+        android:layout_marginBottom="0dp" />
+</android.support.constraint.ConstraintLayout>

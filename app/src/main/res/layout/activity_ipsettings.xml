@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_default"
-    tools:context="com.hznu.kaoqin.IPSettingsActivity">
+    tools:context="com.hznu.kaoqin.activity.IPSettingsActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -17,7 +17,6 @@
         android:minHeight="?attr/actionBarSize"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:paddingTop="@dimen/app_bar_padding"
         app:theme="@style/AppTheme.AppBar"
         app:title="@string/ip_settings"
         tools:layout_editor_absoluteY="0dp" />
@@ -138,7 +137,7 @@
         android:layout_marginRight="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:background="@drawable/bg_btn_round_color_primary"
+        android:background="@drawable/bg_btn_corner_round_color_primary"
         android:text="@string/confirm"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_default"

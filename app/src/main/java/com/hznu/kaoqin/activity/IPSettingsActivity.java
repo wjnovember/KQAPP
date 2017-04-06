@@ -1,4 +1,4 @@
-package com.hznu.kaoqin;
+package com.hznu.kaoqin.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,14 +11,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hznu.kaoqin.R;
+import com.hznu.kaoqin.net.Net;
 import com.hznu.kaoqin.pojo.Constant;
-import com.hznu.kaoqin.utils.SPUtil;
+import com.hznu.kaoqin.proxy.SPProxy;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class IPSettingsActivity extends AppCompatActivity {
+public class IPSettingsActivity extends BaseActivity {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -37,8 +39,6 @@ public class IPSettingsActivity extends AppCompatActivity {
     @BindView(R.id.et_port)
     EditText etPort;
 
-    private String INVALID_IP;
-    private String INVALID_PORT;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,8 +47,6 @@ public class IPSettingsActivity extends AppCompatActivity {
 
         // 初始化标题栏
         initToolbar();
-        // 初始化资源
-        initRes();
         // 初始化网络信息
         initNetInfo();
     }
@@ -63,29 +61,13 @@ public class IPSettingsActivity extends AppCompatActivity {
     }
 
     /**
-     * 初始化资源
-     */
-    private void initRes() {
-        INVALID_IP = getString(R.string.invalid_ip);
-        INVALID_PORT = getString(R.string.invalid_port);
-    }
-
-    /**
      * 初始化IP地址
      */
     private void initNetInfo() {
         // 获取网络信息
-        String ip = (String) SPUtil.get(IPSettingsActivity.this, Constant.Net.KEY_IP, Constant.Type.STRING);
-        String port = (String) SPUtil.get(IPSettingsActivity.this, Constant.Net.KEY_PORT, Constant.Type.STRING);
-        // 如果信息为空，则显示默认信息
-        if (TextUtils.isEmpty(ip)) {
-            ip = Constant.Net.DEFAULT_IP;
-        }
-        if (TextUtils.isEmpty(port)) {
-            port = Constant.Net.DEFAULT_PORT;
-        }
+        String ip = SPProxy.getIp(IPSettingsActivity.this);
+        String port = SPProxy.getPort(IPSettingsActivity.this);
 
-        Log.i(Constant.Tag.NET, "getIp is " + ip);
         String subIp = ip.substring(0, ip.indexOf("."));
         etIp1.setHint(subIp);
 
@@ -150,9 +132,9 @@ public class IPSettingsActivity extends AppCompatActivity {
                 if (isIPValid && isPortValid) {
                     String ip = ip1 + "." + ip2 + "." + ip3 + "." + ip4;
                     Log.i(Constant.Tag.NET, "saveIp is " + ip);
-                    // 往SharedPreferences里存数据
-                    SPUtil.save(IPSettingsActivity.this, Constant.Net.KEY_IP, ip);
-                    SPUtil.save(IPSettingsActivity.this, Constant.Net.KEY_PORT, port);
+                    // 保存IP和端口号
+                    SPProxy.saveIp(IPSettingsActivity.this, ip);
+                    SPProxy.savePort(IPSettingsActivity.this, port);
                     finish();
                 } else if (!isIPValid) {
                     Toast.makeText(IPSettingsActivity.this, INVALID_IP, Toast.LENGTH_SHORT).show();

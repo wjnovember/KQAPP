@@ -64,16 +64,16 @@ public class SPUtil {
         // 判断要获取的数据的类型
         switch (valueType) {
             case Constant.Type.INTEGER:
-                result = mInstance.getInt(key, -1);
+                result = mInstance.getInt(key, 0);
                 break;
             case Constant.Type.STRING:
                 result = mInstance.getString(key, "");
                 break;
             case Constant.Type.FLOAT:
-                result = mInstance.getFloat(key, -1);
+                result = mInstance.getFloat(key, 0);
                 break;
             case Constant.Type.LONG:
-                result = mInstance.getLong(key, -1);
+                result = mInstance.getLong(key, 0);
                 break;
             case Constant.Type.BOOLEAN:
                 result = mInstance.getBoolean(key, false);
